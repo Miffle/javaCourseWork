@@ -1,0 +1,11 @@
+@startuml
+title **Пример взаимодействия сервера с обычным пользователем**
+autonumber
+actor Покупатель as guest
+participant Сервер as server
+database "База Данных" as db
+guest -> server : JSON getMenu request
+server -> db : JSON getMenu request
+db --> server :
+server-->guest : JSON Array Menu response
+@enduml

@@ -1,0 +1,25 @@
+@startuml
+left to right direction
+:Огузок: as oguzok
+:Шеф: as chef
+:Покупатель: as guest
+
+(Посмотреть меню) as (getMenu)
+(Выбрать блюдо) as (choseDish)
+(Заказать) as (makeOrder)
+(Предложить блюдо) as (offerDish)
+(Добавить новое блюдо) as (addNewDish)
+(Принять заявку подмастерья) as (acceptOffer)
+(Удалить блюдо) as (deleteDish)
+(Разориться) as (broke)
+guest --> (getMenu)
+guest --> (choseDish)
+guest --> (makeOrder)
+oguzok --> (getMenu)
+oguzok --> (offerDish)
+chef --> (getMenu)
+chef --> (addNewDish)
+chef --> (acceptOffer)
+chef --> (deleteDish)
+chef --> (broke)
+@enduml
